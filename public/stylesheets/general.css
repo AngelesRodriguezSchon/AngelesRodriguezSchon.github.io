@@ -1,0 +1,11 @@
+body{
+    margin:0;
+    background-image: url("../design/fondo.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+}
+
+p{
+    color:aquamarine;
+}
