@@ -1,5 +1,67 @@
+@font-face{
+    font-family: "Moniqa-BlackCondensedDisplay";
+    src: url(../fonts/Moniqa-BlackCondensedDisplay.otf)
+  }
+.portada{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 70px;
+    margin-left: 60px;
+    margin-right: 60px;
+    flex-wrap: wrap;
+}
 .fotoMia{
     width: 250px;
-    margin-top: 100px;
-    margin-left: 100px;
+    height:250px;
 }
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.hi{
+    font-family: "Moniqa-BlackCondensedDisplay";
+    font-size: 70pt;
+    color:coral; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.soy{
+    font-family: 'Vollkorn', serif;
+    font-weight: 100;
+    font-size: 25pt;
+    color:darkviolet; 
+}
+.plantahome{
+    position: relative;
+    bottom: 650px;
+}
+
+@media (max-width: 1000px){
+    .portada{
+      flex-direction: column;
+      align-items: center;
+      margin: 0px;
+      margin-top: 80px;
+    }
+    .presentacion{
+        
+    }
+    .hi{
+        font-size: 50pt;
+    }
+    .soy{
+        font-size: 18pt;
+    }
+  }
+
+  @media (max-width: 600px){
+    .hi, .soy{
+      width: 300px;
+      margin-left: 20px;
+    }
+   
+  }
