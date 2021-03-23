@@ -37,24 +37,74 @@
 }
 .plantahome{
     position: relative;
-    bottom: 650px;
+    bottom: 400px;
+    width: 100vw;
+}
+.parte2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: -450px;
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(230, 230, 250, 0.4);
+    border-radius: 1em;
+    width: 400px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-family: 'Vollkorn', serif;
+    color: black;
+    font-size: 12pt;
+    font-weight: 100;
+}
+ .contacto p, h4{
+    margin-bottom: -1px;
+}
+.parrafito{
+    font-family: 'Vollkorn', serif;
+    color: coral;
+    font-weight: 200;
+    width: 400px;
+    font-size: 18pt;;
 }
 
-@media (max-width: 1000px){
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+.botones img{
+    width: 400px;
+    margin-top: 100px;
+}
+
+@media (max-width: 1110px){
     .portada{
       flex-direction: column;
       align-items: center;
       margin: 0px;
       margin-top: 80px;
     }
-    .presentacion{
-        
-    }
+    
     .hi{
         font-size: 50pt;
+        margin-top: 30px;
     }
     .soy{
         font-size: 18pt;
+    }
+    .plantahome{
+        bottom: 230px;
+    }
+    .parte2{
+        flex-direction: column;
+        align-items: center;
+        margin-top:-330px;
     }
   }
 
@@ -63,5 +113,19 @@
       width: 300px;
       margin-left: 20px;
     }
+    .plantahome{
+        bottom: 120px;
+    }
+    .parte2{
+        margin-top: -200px;
+    }
    
+  }
+  @media(max-width: 450px){
+      .parte2{
+          margin-top: -150px;
+      }
+      .contacto, .parrafito{
+          width: 270px;
+      }
   }
