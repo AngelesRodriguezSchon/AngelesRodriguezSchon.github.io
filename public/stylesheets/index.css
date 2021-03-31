@@ -68,6 +68,9 @@
  .contacto p, h4{
     margin-bottom: -1px;
 }
+.contacto a{
+    color: darkviolet;
+}
 .parrafito{
     font-family: 'Vollkorn', serif;
     color: coral;
