@@ -18,6 +18,70 @@
     <div class="centerContainer">
         <img class="tituloPortfolio" src="./public/design/This is my portfolio" alt="tituloPortfolio">
     </div>
+    <div class="trabajos">
+                <!-- Trigger the Modal -->
+                <ul id="gallery">
+                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/Who1.jpg" alt="Grand Hotel Budapest poster & postcards" style="width:250px"></a></li>
+                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/Legibilidad.jpg" alt="Legibilidad, Typography work" style="width:250px"></a></li>
+                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/puraLuz1.jpg" alt="Pura Luz poster at Microteatro" style="width:250px"></a></li>
+                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/nightflyers1.jpg" alt="Graphics for the Netflix series Nightflyers" style="width:250px"></a></li>
+                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/photography.jpg" alt="Photography" style="width:250px"></a></li>
+                </ul>
+        
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+        <img class="modal-content" id="img" src="./public/design/Who2.png">
+        <img class="modal-content" id="img" src="./public/design/legibilidad2.png">
+        <img class="modal-content" id="img" src="./public/design/puraLuz2.png">
+        <img class="modal-content" id="img" src="./public/design/nightflyers2.png">
+        <img class="modal-content" id="img" src="./public/design/fotografia2.png">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+        </div>
+    </div>
+    <script>
+                // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.querySelectorAll("#myImg");
+        var modalImg = document.getElementById("img01");
+        var contentImg = document.querySelectorAll("#img")
+        var captionText = document.getElementById("caption");
+
+        
+        for(i=0; i<img.length; i++){
+            img[i].onclick = function(){
+                modal.style.display = "block";
+                for(j=0; j<contentImg.length; j++){
+                    if(j==i){
+                        modalImg.src=contentImg[j].src;
+                    }
+                }
+                captionText.innerHTML = this.alt;
+                
+            }
+        }
+    
+        
+
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+        modal.style.display = "none";
+        }
+    </script>
     
 </body>
 </html>
