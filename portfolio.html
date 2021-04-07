@@ -37,11 +37,6 @@
 
         <!-- Modal Content (The Image) -->
         <img class="modal-content" id="img01">
-        <img class="modal-content" id="img" src="./public/design/Who2.png">
-        <img class="modal-content" id="img" src="./public/design/legibilidad2.png">
-        <img class="modal-content" id="img" src="./public/design/puraLuz2.png">
-        <img class="modal-content" id="img" src="./public/design/nightflyers2.png">
-        <img class="modal-content" id="img" src="./public/design/fotografia2.png">
 
         <!-- Modal Caption (Image Text) -->
         <div id="caption"></div>
@@ -50,29 +45,21 @@
     <script>
                 // Get the modal
         var modal = document.getElementById("myModal");
-
+    
         // Get the image and insert it inside the modal - use its "alt" text as a caption
         var img = document.querySelectorAll("#myImg");
-        var modalImg = document.getElementById("img01");
-        var contentImg = document.querySelectorAll("#img")
+        var modalImg = document.getElementById("#img01");
         var captionText = document.getElementById("caption");
 
+        var images =["./public/design/Who2.png", "./public/design/legibilidad2.png", "./public/design/puraLuz2.png", "./public/design/nightflyers2.png", "./public/design/fotografia2.png"]
         
         for(i=0; i<img.length; i++){
             img[i].onclick = function(){
                 modal.style.display = "block";
-                for(j=0; j<contentImg.length; j++){
-                    if(j==i){
-                        modalImg.src=contentImg[j].src;
-                    }
-                }
+                modalImg.src = this.src;
                 captionText.innerHTML = this.alt;
-                
             }
         }
-    
-        
-
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
