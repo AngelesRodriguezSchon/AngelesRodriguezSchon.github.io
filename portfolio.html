@@ -49,6 +49,7 @@
         var modal = document.querySelector(".modal");
         var closeButton = document.querySelector("button");
         var captionText = document.getElementById("caption");
+        var myImg = document.querySelectorAll('#myImg');
 
         gallery.addEventListener('click', function (event) {
             // the event.target could be the `li` or the `img`, but we only want the `img`
@@ -56,7 +57,7 @@
   
             modal.setAttribute('style', 'display: block;')
             modal.querySelector('.modal-content').setAttribute('src', image.getAttribute('data-modal-src'))
-            captionText.innerHTML = querySelector('img').alt;
+            captionText.innerHTML = image.alt;
         })
 
         closeButton.addEventListener('click', function (event) {
