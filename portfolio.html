@@ -21,53 +21,46 @@
     <div class="trabajos">
                 <!-- Trigger the Modal -->
                 <ul id="gallery">
-                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/Who1.jpg" alt="Grand Hotel Budapest poster & postcards" style="width:250px"></a></li>
-                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/Legibilidad.jpg" alt="Legibilidad, Typography work" style="width:250px"></a></li>
-                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/puraLuz1.jpg" alt="Pura Luz poster at Microteatro" style="width:250px"></a></li>
-                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/nightflyers1.jpg" alt="Graphics for the Netflix series Nightflyers" style="width:250px"></a></li>
-                    <li class="gallery"><a href="#"><img id="myImg" src="./public/design/photography.jpg" alt="Photography" style="width:250px"></a></li>
+                    <li class="gallery"><img id="myImg" src="./public/design/Who1.jpg" data-modal-src="./public/design/Who2.png" alt="Grand Hotel Budapest poster & postcards" style="width:250px"></li>
+                    <li class="gallery"><img id="myImg" src="./public/design/Legibilidad.jpg" data-modal-src="./public/design/legibilidad2.png" alt="Legibilidad, Typography work" style="width:250px"></li>
+                    <li class="gallery"><img id="myImg" src="./public/design/puraLuz1.jpg" data-modal-src="./public/design/puraLuz2.png" alt="Pura Luz poster at Microteatro" style="width:250px"></li>
+                    <li class="gallery"><img id="myImg" src="./public/design/nightflyers1.jpg" data-modal-src="./public/design/nightflyers2.png" alt="Graphics for the Netflix series Nightflyers" style="width:250px"></li>
+                    <li class="gallery"><img id="myImg" src="./public/design/photography.jpg" data-modal-src="./public/design/fotografia2.png" alt="Photography" style="width:250px"></li>
                 </ul>
         
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
 
-        <!-- The Close Button -->
-        <span class="close">&times;</span>
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
 
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
 
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
         </div>
     </div>
     <script>
-                // Get the modal
-        var modal = document.getElementById("myModal");
-    
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.querySelectorAll("#myImg");
-        var modalImg = document.getElementById("#img01");
-        var captionText = document.getElementById("caption");
+       
 
-        var images =["./public/design/Who2.png", "./public/design/legibilidad2.png", "./public/design/puraLuz2.png", "./public/design/nightflyers2.png", "./public/design/fotografia2.png"]
-        
-        for(i=0; i<img.length; i++){
-            img[i].onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            }
-        }
+        var gallery = document.querySelector("ul")
+        var modal = document.querySelector(".modal");
+        var closeButton = document.querySelector("button");
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        gallery.addEventListener('click', function (event) {
+            // the event.target could be the `li` or the `img`, but we only want the `img`
+            var image = event.target.closest('li').querySelector('img')
+  
+            modal.setAttribute('style', 'display: block;')
+            modal.querySelector('.modal-content').setAttribute('src', image.getAttribute('data-modal-src'))
+  
+        })
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() { 
-        modal.style.display = "none";
-        }
+        closeButton.addEventListener('click', function (event) {
+            modal.removeAttribute('style')
+        })
     </script>
     
 </body>
