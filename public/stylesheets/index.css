@@ -108,6 +108,13 @@
     margin-top: 90px;
     margin-bottom: 90px;
 }
+.botonNavM{
+    width: 130px;
+    padding-top: 8px;
+}
+.botonNavCv{
+    padding-bottom: 5px;
+}
 
 @media (max-width: 1110px){
     .portada{
@@ -149,9 +156,9 @@
     .plantaborde{
         width: 600px;
     }
-  }
+}
 
-  @media (max-width: 600px){
+@media (max-width: 600px){
     .hi, .soy{
       width: 300px;
       margin-left: 20px;
@@ -166,14 +173,12 @@
     .plantaborde{
         width: 300px;
     }
-
-   
-  }
-  @media(max-width: 450px){
-      .parte2{
-          margin-top: -150px;
-      }
-      .contacto, .parrafito{
-          width: 270px;
-      }
-  }
+}
+@media(max-width: 450px){
+    .parte2{
+        margin-top: -150px;
+    }
+    .contacto, .parrafito{
+        width: 270px;
+    }
+}

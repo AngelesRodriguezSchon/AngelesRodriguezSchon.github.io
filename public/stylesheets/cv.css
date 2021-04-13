@@ -1,0 +1,85 @@
+@font-face{
+    font-family: "Moniqa-BlackCondensedDisplay";
+    src: url(../fonts/Moniqa-BlackCondensedDisplay.otf)
+  }
+
+.botonNavCv{
+    width: 130px;
+    padding-top: 8px;
+}
+.botonNavM{
+    padding-bottom: 5px;
+}
+.tituloCv{
+    width: 500px;
+    margin-top: 30px;
+}
+.infoContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(230, 230, 250, 0.4);
+    border-radius: 1em;
+    width: 90vw;
+    align-items: center;
+    justify-content: space-around;
+}
+.leftColumn, .rightColumn{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-bottom: 50px;
+}
+.leftColumn{
+    margin-top: -50px;
+}
+.plantaIzq, .plantaDer, .hobbies{
+    width: 400px;
+}
+.plantaIzq{
+    margin-top: 50px;
+}
+
+h3{
+    font-family: "Moniqa-BlackCondensedDisplay";
+    font-size: 40pt;
+    color:coral; 
+    margin:0px;
+    padding:0px;
+    margin-top: 25px;
+    margin-bottom: 17px;;
+}
+h4{
+    font-family: 'Vollkorn', serif;
+    font-weight: 100;
+    font-size: 20pt;
+    color:darkviolet; 
+    margin:0px;
+    padding:0px;
+    margin-top: 5px;
+}
+p{
+    margin:0px;
+    padding:0px;
+    font-family: 'Vollkorn', serif;
+    font-size: 12pt;
+    margin-bottom: 15px;
+    margin-top: 8px;
+}
+li, ul{
+    margin:0px;
+    padding:0px;
+    font-family: 'Vollkorn', serif;
+    font-size: 12pt;
+    list-style: none;
+}
+.sublista{
+    color: rgb(80, 78, 78);
+}
+ul{
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+.thankyou{
+    width: 500px;
+    margin: 50px;
+}
