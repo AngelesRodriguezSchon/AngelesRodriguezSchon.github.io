@@ -83,3 +83,26 @@ ul{
     width: 500px;
     margin: 50px;
 }
+
+@media (max-width: 1000px){
+    .infoContainer{
+        flex-direction: column;
+    }
+    .leftColumn{
+        margin-top: 0px;
+    }
+    .plantaIzq{
+        display: none;
+    }
+    .plantaDer{
+        margin-top: -50px;
+    }
+}
+@media (max-width: 500px){
+    .leftColumn, .rightColumn, .plantaIzq, .plantaDer, .hobbies, .thankyou{
+        width: 250px;
+    }
+    .tituloCv{
+        width: 300px;
+    }
+}

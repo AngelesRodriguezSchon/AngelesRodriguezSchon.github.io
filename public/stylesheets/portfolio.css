@@ -18,7 +18,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
  }
  li{
      margin: 10px;
@@ -29,6 +29,7 @@ ul {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    width:250px;
   }
   
   #myImg:hover {opacity: 0.7;}
@@ -102,15 +103,20 @@ ul {
     cursor: pointer;
   }
   
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
+  @media (max-width: 720px){
     .modal-content {
       width: 100%;
     }
+    .tituloPortfolio{
+      width: 80vw;
+    }
+    #myImg{
+      width: 200px;
+    }
+  }
+  @media (max-width: 590px){
+    #myImg{
+      width: 150px;
+    }
   }
 
-@media (max-width: 700px){
-    .tituloPortfolio{
-        width: 80vw;
-    }
-}
